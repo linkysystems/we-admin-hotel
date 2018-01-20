@@ -1,0 +1,13 @@
+<h1 class="page-header">Infraestruturas de apoio</h1>
+<div class="actions">
+  {{#acl-btn-create model='hotel-event-structure' url="/hotel-infrastructures/create"}}Cadastrar infraestrutura{{/acl-btn-create}}
+</div>
+<br>
+{{conteudos-table
+  data=model.records
+  columns=model.columns
+  pageSize=25
+  useFilteringByColumns=false
+  deleteRecord='deleteRecord'
+  changePublishedStatus='changePublishedStatus'
+}}

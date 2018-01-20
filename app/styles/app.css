@@ -1,0 +1,134 @@
+@import 'theme.css';
+@import 'menu.css';
+@import 'images.css';
+@import 'content.css';
+@import 'login-form.css';
+@import 'bootstrap-loagind.css';
+@import 'tags.css';
+
+.navbar-default {
+  margin-bottom: 0px;
+}
+
+nav.navbar.navbar-default > .container-fluid {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+.navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+    margin-left: 0px;
+}
+
+.tab-content {
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+}
+
+.nav-tabs {
+  margin-bottom: 0;
+}
+
+.navbar-user-avatar {
+  width: 27px;
+  margin-top: -9px;
+  margin-bottom: -5px;
+  margin-right: 5px;
+}
+
+#page-wrapper {
+  padding-bottom: 20px;
+}
+
+.navbar-brand > img {
+  width: 40px;
+  text-align: left;
+  margin-top: -10px;
+  margin-right: 5px;
+  display: inline;
+}
+
+.help-block {
+  font-size: 0.8em;
+}
+
+.system-settings-sidebar table,
+table.image-uploader-table {
+  margin-bottom: 5px;
+}
+
+.models-table-wrapper input {
+  padding: 6px 4px;
+}
+
+.mt-c-id {
+  width: 80px;
+}
+.mt-c-highlighted {
+  width: 118px;
+}
+.mt-c-published {
+  width: 80px;
+}
+.mt-c-createdAt {
+  font-size: 0.9em;
+}
+.text-cell {
+  width: 250px;
+  font-size: 0.9em;
+}
+
+h1,
+.page-header {
+  margin: 20px 0 20px;
+  font-size: 24px;
+}
+
+.link-list-checkbox,
+.hotel-news-link-checkbox {
+  border-top: 1px dashed #ddd;
+  padding: 5px 0px;
+  border-bottom: 1px dashed #ddd;
+}
+
+.d-f-list-group .d-f-list-group {
+  width: 100%;
+  min-height: 20px;
+  background-color: #fff;
+  padding: 7px 0px 7px 35px;
+}
+
+.d-f-list-group-item-label {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 5px 8px;
+  border-radius: 5px;
+
+  cursor: move;
+  cursor: hand;
+  cursor: -webkit-grab;
+  cursor: grab;
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+.d-f-list-group-item-label .actions {
+  margin-left: 20px;
+}
+
+.d-f-list-group-item {
+  margin-bottom: 5px;
+}
+
+.d-f-add-field-buttons > div {
+  margin-bottom: 3px;
+}
+
+.d-f-actions {
+  margin-top: 10px;
+}
+
+.d-f-f-s-i {
+  margin-bottom: 4px;
+}

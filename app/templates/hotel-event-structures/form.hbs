@@ -1,0 +1,161 @@
+{{#if model.record.id}}
+  <h1 class="page-header">Editar estrutura para eventos "{{model.record.name}}"</h1>
+{{else}}
+  <h1 class="page-header">Cadastrar estrutura para eventos</h1>
+{{/if}}
+
+<form {{action "save" model.record model.alias on="submit"}}>
+  <div class="row">
+    <div class="col-md-8">
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <i class="fa fa-pencil-square" aria-hidden="true"></i> Dados básicos
+        </div>
+        <div class="panel-body">
+          <fieldset>
+            <div class="form-group">
+              <label>Nome*:</label>
+              {{input name="name" value=model.record.name class="form-control" required="required"}}
+              <p class="help-block">Nome a estrutura.<br>Exemplo: Salão de festas.</p>
+            </div>
+            <div class="form-group">
+              <label>Sobre:</label>
+              <p class="help-block">Texto pequeno que descreva a estrutura com no máximo 200 letras. Esse texto aparece nas listas.</p>
+              {{textarea name="about" value=model.record.about class="form-control" required="required"}}
+            </div>
+            <div class="form-group">
+              <label>Dados da estrutura:</label>
+              <p class="help-block">Descreva a estrutura com o máximo de informações. Esse texto aparece na página de informações da estrutura.</p>
+              {{tinymce-editor
+                options=editorOptions
+                value=model.record.body
+              }}
+            </div>
+          </fieldset>
+        </div>
+      </div>
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <i class="fa fa-picture-o" aria-hidden="true"></i> Imagens</div>
+        <div class="panel-body">
+          <fieldset>
+            <div class="form-group">
+              <label>{{t 'form-content-featuredImage'}}:</label>
+              {{image-uploader value=model.record.featuredImage}}
+              <p class="help-block">Imagem de no mínimo 900x400px que pode ser quadrada ou com a largura maior que a altura.</p>
+            </div>
+            <div class="form-group">
+              <label>{{t 'form-content-images'}}:</label>
+              {{image-uploader value=model.record.images multiple=true}}
+              <p class="help-block">Imagem qualquer tamanho, o sistema realiza o redimencionamento da imagem.</p>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+
+      <div>
+        <button class="btn btn-primary">
+          <i class="fa fa-save"></i>
+          Salvar
+        </button>
+        <button {{action 'goTo' 'hotel-event-structures.index'}} type="button" class="btn btn-default">
+          <i class="fa fa-step-backward"></i>
+          Lista de estruturas
+        </button>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <i class="fa fa-tags"></i> {{t 'content.form.terms.Title'}}
+        </div>
+        <div class="panel-body">
+          <fieldset>
+{{!--             <div class="form-group">
+              <label>{{t 'form-content-category'}}:</label>
+              {{#power-select
+                options=model.categories
+                selected=model.record.category
+                onchange=(action (mut model.record.category))
+                as |term|
+              }}
+                {{term}}
+              {{/power-select}}
+            </div> --}}
+            <div class="form-group">
+              <label>{{t 'form-content-tags'}}:</label>
+              {{#power-select-multiple
+                search=(action "searchTagsTerms")
+                selected=model.record.tags
+                onchange=(action (mut model.record.tags))
+                as |term|
+              }}
+                {{term}}
+              {{/power-select-multiple}}
+            </div>
+          </fieldset>
+        </div>
+      </div>
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <i class="fa fa-globe" aria-hidden="true"></i> {{t 'content.form.publish.Title'}}
+        </div>
+        <div class="panel-body">
+          <fieldset>
+            <div class="form-group">
+              <label>
+                {{input type="checkbox" checked=model.record.published}} {{t 'form-content-published'}}?
+              </label>
+              {{#if model.record.publishedAt}}
+                <div class="form-group">
+                  <strong>Publicado em:</strong> {{moment-format model.record.publishedAt "DD/MM/YYYY h:mm a"}}
+                </div>
+              {{/if}}
+            </div>
+          </fieldset>
+        </div>
+      </div>
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <i class="fa fa-calendar-o" aria-hidden="true"></i> Datas
+        </div>
+        <div class="panel-body">
+          <fieldset>
+            <div class="form-group">
+              <label>{{t 'form-content-createdAt'}}:</label>
+              {{date-time-picker
+                onChange=(action "changeDate" model.record "createdAt")
+                date=(readonly model.record.createdAt)
+              }}
+            </div>
+            <div class="form-group">
+              <label>{{t 'form-content-updatedAt'}}:</label>
+              {{date-time-picker
+                onChange=(action "changeDate" model.record "updatedAt")
+                date=(readonly model.record.updatedAt)
+              }}
+            </div>
+          </fieldset>
+        </div>
+      </div>
+
+      <div class="panel panel-default">
+        <div class="panel-heading"><i class="fa fa-random"></i> URL</div>
+        <div class="panel-body">
+          <div class="form-group">
+            <label>URL de acesso*:</label>
+            {{input name="setAlias" value=model.alias.alias class="form-control" placeholder="Ex /sobre" }}
+            <p class="help-block">Url limpa de acesso ao conteúdo, use um texto simples sem espaço ou acentuação. Ex /sobre</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</form>

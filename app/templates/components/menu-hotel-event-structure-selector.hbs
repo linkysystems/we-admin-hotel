@@ -1,0 +1,55 @@
+{{#if isLoading}}
+  <div class="text-center">
+    <img class="loading" width="30" src="loading.gif" alt="Carregando...">
+  </div>
+{{else}}
+  {{#bs-tab as |tab|}}
+
+    {{#tab.pane title="Recentes"}}
+      {{#each recentPages as |page|}}
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" {{action "pageChecked" page on="change"}} /> {{page.name}}
+          </label>
+        </div>
+      {{/each}}
+
+      <div class="checkbox link-list-checkbox">
+        <label>
+          <input type="checkbox" {{action "listaChecked" page on="change"}} /> Lista de estruturas
+        </label>
+      </div>
+
+      {{#if havePagesSelected}}
+        <button type="button" class="btn btn-sm btn-default" {{action 'addPages'}}>Adicionar ao menu</button>
+      {{else}}
+        <button type="button" class="btn btn-sm btn-default" disabled>Adicionar ao menu</button>
+      {{/if}}
+    {{/tab.pane}}
+
+    {{#tab.pane title="Buscar"}}
+      <div class="form-group">
+        <label>Selecionar estrutura*:</label>
+        {{#power-select
+          searchEnabled=true
+          search=(action "searchPages")
+          selected=selectedPage
+          placeholder="Clique aqui para selecionar uma estrutura"
+          onchange=(action "selectPage")
+          as |record|
+        }}
+          [id:{{record.id}}] {{record.name}}
+        {{/power-select}}
+        <br>
+        <p>Use o campo acima para selecionar uma estrutura existente.</p>
+        {{#if selectedPage}}
+          <button type="button" class="btn btn-sm btn-default" {{action 'addPage' selectedPage}}>Adicionar ao menu</button>
+        {{else}}
+          <button type="button" class="btn btn-sm btn-default" disabled>Adicionar ao menu</button>
+        {{/if}}
+      </div>
+    {{/tab.pane}}
+  {{/bs-tab}}
+{{/if}}
+
+
