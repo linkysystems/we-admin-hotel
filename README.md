@@ -1,25 +1,12 @@
-# Administrator (we-admin-blog)
+# We.js Hotel admin (we-admin-hotel)
 
-Blog administrator project that add one Ember.js SPA in We.js projects with one simple command.
+Hotel administrator project that add one Ember.js SPA in We.js hotel projects with one simple command.
 
 This project adds the /admin route with the new Ember.js SPA
 
 ## Requirement
 
-- One We.js blog project
-- we-plugin-article installed
-
-## Instalation
-
-In your We.js project root folder tip:
-
-```sh
-we i we-admin-blog
-```
-
-## Example:
-
-Generate one blog project with [We.js generator](https://github.com/wejs/generator-wejs#generate-one-wejs-blog-project) and see how it works.
+- One We.js hotel project
 
 ## DEVELOPMENT:
 
