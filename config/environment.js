@@ -1,7 +1,7 @@
 /* jshint node: true */
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'project-admin-spa',
+    modulePrefix: 'we-admin-hotel',
     environment: environment,
     rootURL: '/admin/',
     imageHost: '',

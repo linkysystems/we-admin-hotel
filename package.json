@@ -1,8 +1,8 @@
 {
-  "name": "project-admin-spa",
+  "name": "we-admin-hotel",
   "private": true,
   "version": "1.1.8",
-  "description": "We.js admin to be served at /admin url",
+  "description": "We.js Hotel project admin client",
   "directories": {
     "doc": "doc",
     "test": "tests"

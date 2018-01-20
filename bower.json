@@ -1,5 +1,5 @@
 {
-  "name": "project-admin-spa",
+  "name": "we-admin-hotel",
   "private": true,
   "dependencies": {
     "ember": "~2.6.0",
