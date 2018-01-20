@@ -11,6 +11,7 @@ Router.map(function() {
   this.route('login');
   this.route('forgot-password');
   this.route('logout');
+
   this.route('profile', function() {
     this.route('change-password');
   });
@@ -22,7 +23,8 @@ Router.map(function() {
     });
   });
 
-  this.route('hotel-news', function() {
+  this.route('news'
+    , function() {
     this.route('create');
     this.route('item', { path: ':id' }, function(){
 
@@ -50,7 +52,7 @@ Router.map(function() {
     });
   });
 
-  this.route('hotel-events', function() {
+  this.route('simple-events', function() {
     this.route('create');
     this.route('item', { path: ':id' }, function(){
 

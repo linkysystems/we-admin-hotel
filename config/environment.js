@@ -51,9 +51,9 @@ module.exports = function(environment) {
         componentName: 'menu-custom-link-form'
       },
       {
-        name: 'hotel-news',
+        name: 'news',
         title: 'Notícias',
-        componentName: 'menu-hotel-news-selector'
+        componentName: 'menu-news-selector'
       },
       {
         name: 'hotel-rooms',
@@ -71,9 +71,9 @@ module.exports = function(environment) {
         componentName: 'menu-hotel-event-structure-selector'
       },
       {
-        name: 'hotel-events',
+        name: 'simple-events',
         title: 'Eventos',
-        componentName: 'menu-hotel-events-selector'
+        componentName: 'menu-simple-events-selector'
       },
       {
         name: 'category',
@@ -102,8 +102,8 @@ module.exports = function(environment) {
       {
         icon: '<i class="fa fa-newspaper-o" aria-hidden="true"></i>',
         text: 'Notícias',
-        linkTo: 'hotel-news.index',
-        permission: 'create_hotel-news'
+        linkTo: 'news.index',
+        permission: 'create_news'
       },
       {
         icon: '<i class="fa fa-file-text"></i>',
@@ -132,8 +132,8 @@ module.exports = function(environment) {
       {
         icon: '<i class="fa fa-ticket" aria-hidden="true"></i>',
         text: 'Eventos',
-        linkTo: 'hotel-events.index',
-        permission: 'create_hotel-event'
+        linkTo: 'simple-events.index',
+        permission: 'create_event'
       },
       {
         icon: '<i class="fa fa-comments-o" aria-hidden="true"></i>',
