@@ -71,7 +71,10 @@
     "ember-uploader": "1.2.3",
     "fs-extra": "^5.0.0",
     "loader.js": "^4.6.0",
-    "we-admin": "git+ssh://git@github.com/wejs/we-admin.git#v1.0.1"
+    "we-admin": "wejs/we-admin.git#v1.0.1",
+    "we-admin-d-form": "linkysystems/we-admin-d-form",
+    "we-admin-news": "linkysystems/we-admin-news",
+    "we-admin-simple-event": "linkysystems/we-admin-simple-event"
   },
   "keywords": [
     "wejs-plugin"
