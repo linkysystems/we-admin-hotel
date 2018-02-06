@@ -126,7 +126,6 @@
         <div class="panel-body">
           <fieldset>
             <div class="form-group">
-              {{log model.record.createdAt}}
               <label>{{t 'form-content-createdAt'}}:</label>
               {{date-time-picker
                 onChange=(action "changeDate" model.record "createdAt")
