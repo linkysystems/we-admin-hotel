@@ -10,14 +10,16 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
           logoId = systemSettings.logoId,
           iconId = systemSettings.iconId,
           bannerId = systemSettings.bannerId,
-          ogImageId = systemSettings.ogImageId;
+          ogImageId = systemSettings.ogImageId,
+          bgImageId = systemSettings.bgImageId;
 
     return Ember.RSVP.hash({
       settings: systemSettings,
       logo: ((logoId)? this.get('image').getImageData(logoId) : null ),
       icon: ((iconId)? this.get('image').getImageData(iconId) : null ),
       banner: ((bannerId)? this.get('image').getImageData(bannerId) : null ),
-      ogImage: ((ogImageId)? this.get('image').getImageData(ogImageId) : null )
+      ogImage: ((ogImageId)? this.get('image').getImageData(ogImageId) : null ),
+      bgImage: ((bgImageId)? this.get('image').getImageData(bgImageId) : null )
     });
   },
 
@@ -27,7 +29,8 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
           logo = this.get('currentModel.logo'),
           icon = this.get('currentModel.icon'),
           banner = this.get('currentModel.banner'),
-          ogImage = this.get('currentModel.ogImage');
+          ogImage = this.get('currentModel.ogImage'),
+          bgImage = this.get('currentModel.bgImage');
 
       // resolve logo url and id
       this.resolveImage(data, logo, 'logo');
@@ -35,8 +38,10 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
       this.resolveImage(data, icon, 'icon');
       // resolve banner url and id
       this.resolveImage(data, banner, 'banner');
-      // resolve image url and id
+      // resolve og image url and id
       this.resolveImage(data, ogImage, 'ogImage');
+      // resolve bg image url and id
+      this.resolveImage(data, bgImage, 'bgImage');
 
       s.setSystemSettings(data)
       .then( (result) => {
