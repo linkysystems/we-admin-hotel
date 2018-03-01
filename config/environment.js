@@ -303,7 +303,7 @@ module.exports = function(environment) {
     ENV.rootURL = '/admin';
     ENV.imageHost = '';
     ENV.API_HOST = '';
-    ENV.GLOBAL_HOST = 'http://shop.linkysystems.com';
+    ENV.GLOBAL_HOST = 'https://shop.linkysystems.com';
     ENV['ember-simple-auth'].serverTokenEndpoint = ENV['API_HOST'] + ENV['ember-simple-auth'].serverTokenEndpoint;
   }
   return ENV;
