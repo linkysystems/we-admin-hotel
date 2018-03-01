@@ -157,6 +157,12 @@
           <i class="fa fa-step-backward"></i>
           Fichas
         </button>
+
+        {{#if model.record.id}}
+          <a href="/hotel-card/{{record.id}}/print" class="btn btn-default" target="_blank">
+            <i class="glyphicon glyphicon-print text-success"></i>
+          </a>
+        {{/if}}
       </div>
     </div>
 

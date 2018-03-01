@@ -15,9 +15,8 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
           className: 'mt-c-id'
         },
         {
-          propertyName: 'creator.fullName',
-          disableSorting: true,
-          disableFiltering: true,
+          propertyName: 'fullName',
+          filteredBy: 'fullName_contains',
           title: 'Nome',
           className: 'mt-c-name text-cell'
         },

@@ -6,9 +6,7 @@ import DS from 'ember-data';
 
 export default DS.Model.extend({
   fullName: DS.attr('string'),
-  gender: DS.attr('string', {
-    defaultValue: true
-  }),
+  gender: DS.attr('string'),
   birthdate: DS.attr('date'),
   travelDocument: DS.attr('string'),
   type: DS.attr('string'),
