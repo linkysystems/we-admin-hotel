@@ -100,6 +100,12 @@ module.exports = function(environment) {
         permission: true
       },
       {
+        icon: '<i class="fa fa-user"></i>',
+        text: 'Fichas',
+        linkTo: 'hotel-cards.index',
+        permission: 'find_hotel-card'
+      },
+      {
         icon: '<i class="fa fa-newspaper-o" aria-hidden="true"></i>',
         text: 'Notícias',
         linkTo: 'news.index',

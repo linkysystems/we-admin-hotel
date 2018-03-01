@@ -48,9 +48,6 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
         this.send('queryError', err);
         return err;
       });
-    },
-    changeDate(x, y, z) {
-      console.log('>', x, y, z);
     }
   }
 });

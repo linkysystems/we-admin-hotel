@@ -37,6 +37,15 @@ Router.map(function() {
     });
   });
 
+
+  this.route('hotel-cards', function() {
+    this.route('create');
+    this.route('item', { path: ':id' }, function(){
+
+    });
+  });
+
+
   this.route('hotel-event-structures', function() {
     this.route('create');
     this.route('item', { path: ':id' }, function(){

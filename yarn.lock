@@ -2604,7 +2604,7 @@ ember-cli-babel@^5.1.5, ember-cli-babel@^5.1.6, ember-cli-babel@^5.1.7:
     ember-cli-version-checker "^1.0.2"
     resolve "^1.1.2"
 
-ember-cli-babel@^6.0.0, ember-cli-babel@^6.0.0-beta.4, ember-cli-babel@^6.0.0-beta.7, ember-cli-babel@^6.10.0, ember-cli-babel@^6.11.0, ember-cli-babel@^6.3.0, ember-cli-babel@^6.6.0, ember-cli-babel@^6.7.2, ember-cli-babel@^6.8.0, ember-cli-babel@^6.8.1, ember-cli-babel@^6.8.2, ember-cli-babel@^6.9.0, ember-cli-babel@^6.9.2:
+ember-cli-babel@^6.0.0, ember-cli-babel@^6.0.0-beta.4, ember-cli-babel@^6.0.0-beta.7, ember-cli-babel@^6.10.0, ember-cli-babel@^6.11.0, ember-cli-babel@^6.3.0, ember-cli-babel@^6.6.0, ember-cli-babel@^6.7.2, ember-cli-babel@^6.8.0, ember-cli-babel@^6.8.1, ember-cli-babel@^6.8.2, ember-cli-babel@^6.9.0:
   version "6.11.0"
   resolved "https://registry.yarnpkg.com/ember-cli-babel/-/ember-cli-babel-6.11.0.tgz#79cb184bac3c05bfe181ddc306bac100ab1f9493"
   dependencies:
@@ -8479,9 +8479,9 @@ we-admin-d-form@linkysystems/we-admin-d-form:
     ember-cli-htmlbars "^2.0.3"
     ember-cli-htmlbars-inline-precompile "^1.0.2"
 
-we-admin-news@linkysystems/we-admin-news:
-  version "0.0.0"
-  resolved "https://codeload.github.com/linkysystems/we-admin-news/tar.gz/ed19e13745dac2370f161f3eef2fbb36f631b3cb"
+we-admin-news@linkysystems/we-admin-news#v1.0.0:
+  version "1.0.0"
+  resolved "https://codeload.github.com/linkysystems/we-admin-news/tar.gz/15c87a33d832a2a1a1bbd34b8549c75635c336d0"
   dependencies:
     ember-cli-babel "^6.6.0"
     ember-cli-htmlbars "^2.0.3"
@@ -8495,11 +8495,11 @@ we-admin-simple-event@linkysystems/we-admin-simple-event#v0.0.1:
     ember-cli-htmlbars "^2.0.3"
     ember-cli-htmlbars-inline-precompile "^1.0.2"
 
-we-admin@wejs/we-admin#v1.0.1:
-  version "1.0.1"
-  resolved "https://codeload.github.com/wejs/we-admin/tar.gz/6ed788d374f37f04b50590eb3b591865c1ba7037"
+we-admin@wejs/we-admin#v1.0.8:
+  version "1.0.8"
+  resolved "https://codeload.github.com/wejs/we-admin/tar.gz/4ff1583e80fddf8d482700e6635cb2f15d502ff7"
   dependencies:
-    ember-cli-babel "^6.9.2"
+    ember-cli-babel "^6.11.0"
     ember-cli-htmlbars "^2.0.3"
     ember-cli-htmlbars-inline-precompile "^1.0.2"
 
