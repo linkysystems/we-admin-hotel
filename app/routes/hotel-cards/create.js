@@ -16,7 +16,7 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
         this.get('notifications')
             .success('Ficha registrada com sucesso.');
 
-        this.transitionTo('hotel-cards.item', r.id);
+        this.transitionTo('/hotel-cards');
         this.send('scrollToTop');
         // success
         return r;

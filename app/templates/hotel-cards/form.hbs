@@ -24,6 +24,10 @@
                 date=(readonly model.record.birthdate)
               }}
             </div>
+            <div class="form-group">
+              <label>{{t 'form-hotel-card-ocupationJob'}}:</label>
+              {{input name="ocupationJob" value=model.record.ocupationJob class="form-control"}}
+            </div>
           </fieldset>
         </div>
       </div>
@@ -159,7 +163,7 @@
         </button>
 
         {{#if model.record.id}}
-          <a href="/hotel-card/{{record.id}}/print" class="btn btn-default" target="_blank">
+          <a href="/hotel-card/{{model.record.id}}/print" class="btn btn-default" target="_blank">
             <i class="glyphicon glyphicon-print text-success"></i>
           </a>
         {{/if}}

@@ -8,6 +8,7 @@ export default DS.Model.extend({
   fullName: DS.attr('string'),
   gender: DS.attr('string'),
   birthdate: DS.attr('date'),
+  ocupationJob: DS.attr('string'),
   travelDocument: DS.attr('string'),
   type: DS.attr('string'),
   issuingCountry: DS.attr('string'),
