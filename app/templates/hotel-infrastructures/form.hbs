@@ -26,10 +26,7 @@
             <div class="form-group">
               <label>Dados da estrutura:</label>
               <p class="help-block">Descreva a estrutura com o máximo de informações. Esse texto aparece na página de informações da estrutura.</p>
-              {{tinymce-editor
-                options=editorOptions
-                value=model.record.body
-              }}
+              {{field-text-editor value=model.record.body}}
             </div>
           </fieldset>
         </div>

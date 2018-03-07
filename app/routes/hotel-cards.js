@@ -38,6 +38,23 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
       });
     },
 
+    saveConditions(c) {
+      let s = this.get('settings');
+
+      s.setSystemSettings({
+        hotelCardConditions: c
+      })
+      .then( (result) => {
+        Ember.set(s, 'systemSettings', result.settings);
+        this.get('notifications')
+            .success('Condições do hotel salvas com sucesso.');
+        this.send('scrollToTop');
+      })
+      .fail( (err)=> {
+        this.send('queryError', err);
+      });
+    },
+
     print(record) {
       let headers = { Accept: 'application/json' },
           accessToken = this.get('session.session.authenticated.access_token');

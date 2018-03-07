@@ -40,6 +40,7 @@ Router.map(function() {
 
   this.route('hotel-cards', function() {
     this.route('create');
+    this.route('conditions');
     this.route('item', { path: ':id' }, function(){
 
     });
