@@ -1,7 +1,7 @@
 {
   "name": "we-admin-hotel",
   "private": true,
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "We.js Hotel project admin client",
   "directories": {
     "doc": "doc",
