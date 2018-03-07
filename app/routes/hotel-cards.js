@@ -23,6 +23,8 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
       }
     },
     save(record) {
+      record.accConditions = true;
+
       record.save()
       .then( (r)=> {
         this.get('notifications')

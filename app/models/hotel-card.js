@@ -31,6 +31,10 @@ export default DS.Model.extend({
   ciCountry: DS.attr('string'),
   ciPhoneNumber: DS.attr('string'),
 
+  accConditions: DS.attr('boolean', {
+    defaultValue: true
+  }),
+
   creator: DS.belongsTo('user', {
     async: true
   }),

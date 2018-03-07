@@ -17,3 +17,5 @@ npm-debug.log
 testem.log
 db-settings-watch-file.txt
 package-lock.json
+
+yarn-error.log
