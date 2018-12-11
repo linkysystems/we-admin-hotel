@@ -1,16 +1,18 @@
-import Ember from 'ember';
-import ENV from "../../config/environment";
+import Controller from '@ember/controller';
+import { inject } from '@ember/service';
+import { computed } from '@ember/object';
+import ENV from '../../config/environment';
 
 // const get = Ember.get;
 let editorLocaleCache, editorLocaleUrlCache;
 
-export default Ember.Controller.extend({
-  ajax: Ember.inject.service(),
-  session: Ember.inject.service('session'),
-  settings: Ember.inject.service('settings'),
-  upload: Ember.inject.service('upload'),
+export default Controller.extend({
+  ajax: inject(),
+  session: inject('session'),
+  settings: inject('settings'),
+  upload: inject('upload'),
 
-  editorOptions: Ember.computed('settings.data', {
+  editorOptions: computed('settings.data', {
     get() {
       const opts = {
         min_height: 400,

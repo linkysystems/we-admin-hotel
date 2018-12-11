@@ -1,7 +1,7 @@
-import Ember from 'ember';
+import Route from '@ember/routing/route';
 import AuthenticatedRouteMixin from 'ember-simple-auth/mixins/authenticated-route-mixin';
 
-export default Ember.Route.extend(AuthenticatedRouteMixin, {
+export default Route.extend(AuthenticatedRouteMixin, {
   actions: {
     deleteRecord(record) {
       if (confirm(`Tem certeza que deseja descadastrar o quarto "${record.get('name')}"? \nEssa ação não pode ser desfeita.`)) {
@@ -50,9 +50,6 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
         this.send('queryError', err);
         return err;
       });
-    },
-    changeDate(x, y, z) {
-      console.log('>', x, y, z);
     }
   }
 });

@@ -1,14 +1,18 @@
-import Ember from 'ember';
+import Route from '@ember/routing/route';
+import { set } from '@ember/object';
+import { getOwner } from '@ember/application';
+import $ from 'jquery';
+import { bind } from '@ember/runloop';
 import AuthenticatedRouteMixin from 'ember-simple-auth/mixins/authenticated-route-mixin';
 
 let ENV;
 
-export default Ember.Route.extend(AuthenticatedRouteMixin, {
+export default Route.extend(AuthenticatedRouteMixin, {
 
   init(){
     this._super(...arguments);
 
-    ENV = Ember.getOwner(this).resolveRegistration('config:environment');
+    ENV = getOwner(this).resolveRegistration('config:environment');
   },
 
   actions: {
@@ -47,7 +51,7 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
         hotelCardConditions: c
       })
       .then( (result) => {
-        Ember.set(s, 'systemSettings', result.settings);
+        set(s, 'systemSettings', result.settings);
         this.get('notifications')
             .success('Condições do hotel salvas com sucesso.');
         this.send('scrollToTop');
@@ -65,18 +69,18 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
         headers.Authorization = `Basic ${accessToken}`;
       }
 
-      return Ember.$.ajax({
+      return $.ajax({
         url: `${ENV.API_HOST}/hotel-card/${record.id}/print`,
         type: 'POST',
         headers: headers
       })
-      .then( (data) => {
-        console.log('result>', data);
-      })
       .fail( (err)=> {
-        this.sendAction('queryError', err);
-        return null;
+        bind(this, ()=> {
+          this.send('queryError', err);
+          return null;
+        });
       });
+
     }
   }
 });

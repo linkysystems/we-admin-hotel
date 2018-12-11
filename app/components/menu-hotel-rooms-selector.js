@@ -1,8 +1,8 @@
-import Ember from 'ember';
+import Component from '@ember/component';
+import { inject } from '@ember/service';
 
-export default Ember.Component.extend({
-
-  store: Ember.inject.service('store'),
+export default Component.extend({
+  store: inject('store'),
 
   addLink: 'addLink',
 

@@ -1,10 +1,13 @@
-import Ember from 'ember';
+import Route from '@ember/routing/route';
+import { inject } from '@ember/service';
+import { hash } from 'rsvp';
+import { set, get } from '@ember/object';
 import AuthenticatedRouteMixin from 'ember-simple-auth/mixins/authenticated-route-mixin';
 
-export default Ember.Route.extend(AuthenticatedRouteMixin, {
-  term: Ember.inject.service(),
+export default Route.extend(AuthenticatedRouteMixin, {
+  term: inject(),
   model(params) {
-    return Ember.RSVP.hash({
+    return hash({
       record: this.get('store')
                   .findRecord('hotel-room', params.id),
       categories: this.get('term')
@@ -28,7 +31,7 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
     if (
       model.alias && model.alias.alias && model.record && model.record.id
     ) {
-      Ember.set(model.record, 'setAlias', Ember.get(model.alias,'alias'));
+      set(model.record, 'setAlias', get(model.alias,'alias'));
     }
   }
 });

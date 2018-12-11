@@ -1,7 +1,8 @@
-import Ember from 'ember';
+import Controller from '@ember/controller';
+import { inject } from '@ember/service';
 
-export default Ember.Controller.extend({
-  ajax: Ember.inject.service(),
+export default Controller.extend({
+  ajax: inject(),
   actions: {
     changeDate(record, field, dates) {
       if (!dates || !dates[0]) {

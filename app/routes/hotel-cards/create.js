@@ -1,13 +1,13 @@
-import Ember from 'ember';
+import Route from '@ember/routing/route';
+import { hash } from 'rsvp';
 import AuthenticatedRouteMixin from 'ember-simple-auth/mixins/authenticated-route-mixin';
 
-export default Ember.Route.extend(AuthenticatedRouteMixin, {
-
+export default Route.extend(AuthenticatedRouteMixin, {
   model() {
-    return {
+    return hash({
       record: this.store.createRecord('hotel-card', {}),
       genderOptions: ['F', 'M']
-    };
+    });
   },
   actions: {
     save(record) {

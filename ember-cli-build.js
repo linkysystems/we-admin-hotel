@@ -1,34 +1,25 @@
-/*jshint node:true*/
-/* global require, module */
-var EmberApp = require('ember-cli/lib/broccoli/ember-app');
+'use strict';
+
+const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
-  var app = new EmberApp(defaults, {
+  let app = new EmberApp(defaults, {
     'ember-power-select': {
       theme: 'bootstrap'
     },
-
     'ember-font-awesome': {
       includeComponent: false
     },
-
     fingerprint: {
        exclude: ['tiny-mce-languages/**'],
     },
-
     flatpickr: {
       locales: ['pt']
     },
-
     'ember-bootstrap': {
       'bootstrapVersion': 3,
       'importBootstrapFont': true,
       'importBootstrapCSS': true
-    },
-    babel: {
-      plugins: [
-        'transform-object-rest-spread'
-      ]
     }
   });
 
