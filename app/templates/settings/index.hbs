@@ -35,9 +35,19 @@
               </p>
             </div>
             <div class="form-group">
-              <label>Email do sistema*:</label>
+              <label>E-mail do sistema*:</label>
               {{input value=model.settings.emailContact class="form-control" placeholder="Ex: nao-responda <contato@linkysystems.com>" required="required" name="emailContact"}}
-              <p class="help-block">Endereço de email do sistema que é usado para recebimento das mensagens de contato e avisos aos administradores.</p>
+              <p class="help-block">Endereço de e-mail do sistema que é usado para recebimento das mensagens de contato e avisos aos administradores.</p>
+            </div>
+            <div class="form-group">
+              <label>E-mails de notificação de alterações em conteúdos:</label>
+              {{input
+                value=model.settings.contentChangeNotificatorToEmails
+                class="form-control"
+                placeholder="Ex: nao-responda <contato@linkysystems.com>"
+                name="contentChangeNotificatorToEmails"
+              }}
+              <p class="help-block">Endereços de e-mail para onde as notificações de alteração de conteúdo são enviadas.</p>
             </div>
             <div class="form-group">
               <label>Subtítulo do site*:</label>

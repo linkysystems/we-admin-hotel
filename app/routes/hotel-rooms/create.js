@@ -4,7 +4,7 @@ import { hash } from 'rsvp';
 import AuthenticatedRouteMixin from 'ember-simple-auth/mixins/authenticated-route-mixin';
 
 export default Route.extend(AuthenticatedRouteMixin, {
-  term: inject.service(),
+  term: inject(),
 
   model() {
     return hash({
