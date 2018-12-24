@@ -1,17 +1,31 @@
-<a href="{{record.linkPermanent}}" class="btn btn-default btn-sm" target="_blank">
+<a
+  href={{record.linkPermanent}}
+  class="btn btn-default btn-sm"
+  target="_blank"
+  rel="noopener"
+>
   <i class="glyphicon glyphicon-eye-open"></i>
   {{#bs-tooltip placement="top"}}Ver{{/bs-tooltip}}
 </a>
-{{#link-to 'hotel-cards.item' record.id class="btn btn-default btn-sm"}}
+{{#link-to "hotel-cards.item" record.id class="btn btn-default btn-sm"}}
   <i class="glyphicon glyphicon-pencil text-success"></i>
   {{#bs-tooltip placement="top"}}Editar{{/bs-tooltip}}
 {{/link-to}}
 
-<a href="{{ENV.API_HOST}}/hotel-card/{{record.id}}/print" class="btn btn-default btn-sm" target="_blank">
+<a
+  href="{{ENV.API_HOST}}/hotel-card/{{record.id}}/print"
+  class="btn btn-default btn-sm"
+  target="_blank"
+  rel="noopener"
+>
   <i class="glyphicon glyphicon-print text-success"></i>
 </a>
 
-<button {{action 'deleteRecord' record}} type="button" class="btn btn-default btn-sm">
+<button
+  type="button"
+  class="btn btn-default btn-sm"
+  {{action "deleteRecord" record}}
+>
   <i class="glyphicon glyphicon-remove text-danger"></i>
   {{#bs-tooltip placement="top"}}Deletar{{/bs-tooltip}}
 </button>

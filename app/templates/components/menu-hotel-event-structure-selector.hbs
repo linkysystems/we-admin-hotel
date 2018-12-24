@@ -9,19 +9,19 @@
       {{#each recentPages as |page|}}
         <div class="checkbox">
           <label>
-            <input type="checkbox" {{action "pageChecked" page on="change"}} /> {{page.name}}
+            <input type="checkbox" {{action "pageChecked" page on="change"}} > {{page.name}}
           </label>
         </div>
       {{/each}}
 
       <div class="checkbox link-list-checkbox">
         <label>
-          <input type="checkbox" {{action "listaChecked" page on="change"}} /> Lista de estruturas
+          <input type="checkbox" {{action "listaChecked" page on="change"}} > Lista de estruturas
         </label>
       </div>
 
       {{#if havePagesSelected}}
-        <button type="button" class="btn btn-sm btn-default" {{action 'addPages'}}>Adicionar ao menu</button>
+        <button type="button" class="btn btn-sm btn-default" {{action "addPages"}}>Adicionar ao menu</button>
       {{else}}
         <button type="button" class="btn btn-sm btn-default" disabled>Adicionar ao menu</button>
       {{/if}}
@@ -36,14 +36,20 @@
           selected=selectedPage
           placeholder="Clique aqui para selecionar uma estrutura"
           onchange=(action "selectPage")
-          as |record|
+        as |record|
         }}
           [id:{{record.id}}] {{record.name}}
         {{/power-select}}
         <br>
         <p>Use o campo acima para selecionar uma estrutura existente.</p>
         {{#if selectedPage}}
-          <button type="button" class="btn btn-sm btn-default" {{action 'addPage' selectedPage}}>Adicionar ao menu</button>
+          <button
+            type="button"
+            class="btn btn-sm btn-default"
+            {{action "addPage" selectedPage}}
+          >
+            Adicionar ao menu
+          </button>
         {{else}}
           <button type="button" class="btn btn-sm btn-default" disabled>Adicionar ao menu</button>
         {{/if}}

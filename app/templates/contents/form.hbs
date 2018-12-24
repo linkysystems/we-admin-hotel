@@ -1,7 +1,7 @@
 {{#if model.record.id}}
-  <h1 class="page-header">{{t 'content.edit' title=model.record.title}}</h1>
+  <h1 class="page-header">{{t "content.edit" title=model.record.title}}</h1>
 {{else}}
-  <h1 class="page-header">{{t 'content.create'}}</h1>
+  <h1 class="page-header">{{t "content.create"}}</h1>
 {{/if}}
 
 <form {{action "save" model.record model.alias on="submit"}}>
@@ -9,48 +9,66 @@
     <div class="col-md-8">
 
       <div class="panel panel-default">
-        <div class="panel-heading">{{t 'content.form.terms.Data'}}</div>
+        <div class="panel-heading">{{t "content.form.terms.Data"}}</div>
         <div class="panel-body">
           <fieldset>
             <div class="form-group">
-              <label>{{t 'form-content-title'}}*:</label>
-              {{input value=model.record.title class="form-control" placeholder=(t 'form-placeholder-content-title') required="required"}}
+              <label>{{t "form-content-title"}}*:</label>
+              {{input
+                value=model.record.title
+                class="form-control"
+                placeholder=(t "form-placeholder-content-title")
+                required="required"
+              }}
             </div>
             <div class="form-group">
-              <label>{{t 'form-content-about'}}:</label>
-              {{textarea value=model.record.about class="form-control"}}
+              <label>{{t "form-content-about"}}:</label>
+              {{textarea
+                value=model.record.about
+                class="form-control"
+              }}
             </div>
             <div class="form-group">
-              <label>{{t 'form-content-body'}}:</label>
-              {{field-text-editor value=model.record.body}}
+              <label>{{t "form-content-body"}}:</label>
+              {{field-text-editor
+                value=model.record.body
+              }}
             </div>
           </fieldset>
         </div>
       </div>
 
       <div class="panel panel-default">
-        <div class="panel-heading">{{t 'content.form.terms.Images'}}</div>
+        <div class="panel-heading">{{t "content.form.terms.Images"}}</div>
         <div class="panel-body">
           <fieldset>
             <div class="form-group">
-              <label>{{t 'form-content-featuredImage'}}:</label>
-              {{image-uploader value=model.record.featuredImage}}
+              <label>{{t "form-content-featuredImage"}}:</label>
+              {{image-uploader
+                value=model.record.featuredImage
+              }}
             </div>
             <div class="form-group">
-              <label>{{t 'form-content-images'}}:</label>
-              {{image-uploader value=model.record.images multiple=true}}
+              <label>{{t "form-content-images"}}:</label>
+              {{image-uploader
+                value=model.record.images
+                multiple=true
+              }}
             </div>
           </fieldset>
         </div>
       </div>
 
       <div class="panel panel-default">
-        <div class="panel-heading">{{t 'content.form.terms.Attachment'}}</div>
+        <div class="panel-heading">{{t "content.form.terms.Attachment"}}</div>
         <div class="panel-body">
           <fieldset>
             <div class="form-group">
-              <label>{{t 'form-content-attachment'}}:</label>
-              {{file-uploader value=model.record.attachment multiple=true}}
+              <label>{{t "form-content-attachment"}}:</label>
+              {{file-uploader
+                value=model.record.attachment
+                multiple=true
+              }}
             </div>
           </fieldset>
         </div>
@@ -60,27 +78,16 @@
     <div class="col-md-4">
 
       <div class="panel panel-default">
-        <div class="panel-heading">{{t 'content.form.terms.Title'}}</div>
+        <div class="panel-heading">{{t "content.form.terms.Title"}}</div>
         <div class="panel-body">
           <fieldset>
-      {{!--             <div class="form-group">
-              <label>{{t 'form-content-category'}}:</label>
-              {{#power-select
-                options=model.categories
-                selected=model.record.category
-                onchange=(action (mut model.record.category))
-                as |term|
-              }}
-                {{term}}
-              {{/power-select}}
-            </div> --}}
             <div class="form-group">
-              <label>{{t 'form-content-tags'}}:</label>
+              <label>{{t "form-content-tags"}}:</label>
               {{#power-select-multiple
                 search=(action "searchTagsTerms")
                 selected=model.record.tags
                 onchange=(action (mut model.record.tags))
-                as |term|
+              as |term|
               }}
                 {{term}}
               {{/power-select-multiple}}
@@ -90,12 +97,15 @@
       </div>
 
       <div class="panel panel-default">
-        <div class="panel-heading">{{t 'content.form.publish.Title'}}</div>
+        <div class="panel-heading">{{t "content.form.publish.Title"}}</div>
         <div class="panel-body">
           <fieldset>
             <div class="form-group">
               <label>
-                {{input type="checkbox" checked=model.record.published}} {{t 'form-content-published'}}?
+                {{input
+                  type="checkbox"
+                  checked=model.record.published
+                }} {{t "form-content-published"}}?
               </label>
               {{#if model.record.publishedAt}}
                 <div class="form-group">
@@ -108,18 +118,18 @@
       </div>
 
       <div class="panel panel-default">
-        <div class="panel-heading">{{t 'content.form.terms.Dates'}}</div>
+        <div class="panel-heading">{{t "content.form.terms.Dates"}}</div>
         <div class="panel-body">
           <fieldset>
             <div class="form-group">
-              <label>{{t 'form-content-createdAt'}}:</label>
+              <label>{{t "form-content-createdAt"}}:</label>
               {{date-time-picker
                 onChange=(action "changeDate" model.record "createdAt")
                 date=(readonly model.record.createdAt)
               }}
             </div>
             <div class="form-group">
-              <label>{{t 'form-content-updatedAt'}}:</label>
+              <label>{{t "form-content-updatedAt"}}:</label>
               {{date-time-picker
                 onChange=(action "changeDate" model.record "updatedAt")
                 date=(readonly model.record.updatedAt)
@@ -134,7 +144,12 @@
         <div class="panel-body">
           <div class="form-group">
             <label>URL de acesso*:</label>
-            {{input name="setAlias" value=model.alias.alias class="form-control" placeholder="Ex /sobre" }}
+            {{input
+              name="setAlias"
+              value=model.alias.alias
+              class="form-control"
+              placeholder="Ex /sobre"
+            }}
             <p class="help-block">URL/caminho de acesso à página, use um texto simples sem espaço ou acentuação. Ex /sobre</p>
           </div>
         </div>
@@ -145,11 +160,15 @@
       <div class="footer-actions">
         <button class="btn btn-primary">
           <i class="fa fa-save"></i>
-          {{t 'content.Save'}}
+          {{t "content.Save"}}
         </button>
-        <button {{action 'goTo' 'contents.index'}} type="button" class="btn btn-default">
+        <button
+          type="button"
+          class="btn btn-default"
+          {{action "goTo" "contents.index"}}
+        >
           <i class="fa fa-step-backward"></i>
-          {{t 'content.find'}}
+          {{t "content.find"}}
         </button>
       </div>
     </div>

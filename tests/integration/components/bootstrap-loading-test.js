@@ -12,7 +12,10 @@ test('it renders', function(assert) {
 
   this.render(hbs`{{bootstrap-loading}}`);
 
-  assert.equal(this.$().text().trim(), '');
+  assert.ok(
+    this.$().html().trim().indexOf('<img class=\"loading-gif\" src=\"loading.gif\" alt=\"Carregando...\">') > -1,
+    'Should render loading.gif'
+  );
 
   // Template block usage:
   this.render(hbs`
@@ -21,5 +24,8 @@ test('it renders', function(assert) {
     {{/bootstrap-loading}}
   `);
 
-  assert.equal(this.$().text().trim(), 'template block text');
+  assert.ok(
+    this.$().html().trim().indexOf('<img class=\"loading-gif\" src=\"loading.gif\" alt=\"Carregando...\">') > -1 ,
+    'Should render loading.gif'
+  );
 });

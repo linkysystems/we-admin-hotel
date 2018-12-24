@@ -59,6 +59,7 @@ export default Component.extend({
       let selectedPage = this.get('selectedPage');
       if (selectedPage && selectedPage.get('linkPermanent')) {
         let link = this.buildLink( selectedPage );
+
         this.sendAction('addLink', link);
         this.set('selectedPage', null);
       }

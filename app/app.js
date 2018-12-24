@@ -6,7 +6,7 @@ import config from './config/environment';
 import Route from '@ember/routing/route';
 import Controller from '@ember/controller';
 import { inject } from '@ember/service';
-import { on } from '@ember/object/evented'
+import { on } from '@ember/object/evented';
 import $ from 'jquery';
 
 const App = Application.extend({

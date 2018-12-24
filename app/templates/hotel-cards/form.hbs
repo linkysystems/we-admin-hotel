@@ -15,7 +15,12 @@
           <fieldset>
             <div class="form-group">
               <label>Nome completo*:</label>
-              {{input name="fullName" value=model.record.fullName class="form-control" required="required"}}
+              {{input
+                name="fullName"
+                value=model.record.fullName
+                class="form-control"
+                required="required"
+              }}
             </div>
             <div class="form-group">
               <label>Data de nascimento*:</label>
@@ -25,8 +30,12 @@
               }}
             </div>
             <div class="form-group">
-              <label>{{t 'form-hotel-card-ocupationJob'}}:</label>
-              {{input name="ocupationJob" value=model.record.ocupationJob class="form-control"}}
+              <label>{{t "form-hotel-card-ocupationJob"}}:</label>
+              {{input
+                name="ocupationJob"
+                value=model.record.ocupationJob
+                class="form-control"
+              }}
             </div>
           </fieldset>
         </div>
@@ -39,17 +48,32 @@
         <div class="panel-body">
           <fieldset>
             <div class="form-group">
-              <label>{{t 'form-hotel-card-travelDocument'}}*:</label>
-              {{input name="travelDocument" value=model.record.travelDocument class="form-control" required="required"}}
+              <label>{{t "form-hotel-card-travelDocument"}}*:</label>
+              {{input
+                name="travelDocument"
+                value=model.record.travelDocument
+                class="form-control"
+                required="required"
+              }}
             </div>
             <div class="form-group">
-              <label>{{t 'form-hotel-card-type'}}*:</label>
-              {{input name="type" value=model.record.type class="form-control" required="required"}}
+              <label>{{t "form-hotel-card-type"}}*:</label>
+              {{input
+                name="type"
+                value=model.record.type
+                class="form-control"
+                required="required"
+              }}
               <p class="help-block">Exemplos: Identidade, CNH, etc ...</p>
             </div>
             <div class="form-group">
-              <label>{{t 'form-hotel-card-issuingCountry'}}*:</label>
-              {{input name="issuingCountry" value=model.record.issuingCountry class="form-control" required="required"}}
+              <label>{{t "form-hotel-card-issuingCountry"}}*:</label>
+              {{input
+                name="issuingCountry"
+                value=model.record.issuingCountry
+                class="form-control"
+                required="required"
+              }}
               <p class="help-block">Exemplos: Identidade, CNH, etc ...</p>
             </div>
           </fieldset>
@@ -61,64 +85,121 @@
         <div class="panel-body">
           <fieldset>
             <div class="form-group">
-              <label>{{t 'form-hotel-card-homeAddress'}}*:</label>
-              {{input name="homeAddress" value=model.record.homeAddress class="form-control" required="required"}}
+              <label>{{t "form-hotel-card-homeAddress"}}*:</label>
+              {{input
+                name="homeAddress"
+                value=model.record.homeAddress
+                class="form-control"
+                required="required"
+              }}
             </div>
             <div class="form-group">
-              <label>{{t 'form-hotel-card-zipCode'}}*:</label>
-              {{input name="zipCode" value=model.record.zipCode class="form-control" required="required"}}
+              <label>{{t "form-hotel-card-zipCode"}}*:</label>
+              {{input
+                name="zipCode"
+                value=model.record.zipCode
+                class="form-control"
+                required="required"
+              }}
             </div>
             <div class="form-group">
-              <label>{{t 'form-hotel-card-city'}}*:</label>
-              {{input name="city" value=model.record.city class="form-control" required="required"}}
+              <label>{{t "form-hotel-card-city"}}*:</label>
+              {{input
+                name="city"
+                value=model.record.city
+                class="form-control"
+                required="required"
+              }}
             </div>
             <div class="form-group">
-              <label>{{t 'form-hotel-card-state'}}*:</label>
-              {{input name="state" value=model.record.state class="form-control" required="required"}}
+              <label>{{t "form-hotel-card-state"}}*:</label>
+              {{input
+                name="state"
+                value=model.record.state
+                class="form-control"
+                required="required"
+              }}
             </div>
             <div class="form-group">
-              <label>{{t 'form-hotel-card-country'}}*:</label>
-              {{input name="country" value=model.record.country class="form-control" required="required"}}
+              <label>{{t "form-hotel-card-country"}}*:</label>
+              {{input
+                name="country"
+                value=model.record.country
+                class="form-control"
+                required="required"
+              }}
             </div>
           </fieldset>
         </div>
       </div>
 
-        <div class="panel panel-default">
+      <div class="panel panel-default">
         <div class="panel-heading">Informações comerciais</div>
         <div class="panel-body">
           <fieldset>
             <div class="form-group">
-              <label>{{t 'form-hotel-card-ciCompany'}}:</label>
-              {{input name="ciCompany" value=model.record.ciCompany class="form-control"}}
+              <label>{{t "form-hotel-card-ciCompany"}}:</label>
+              {{input
+                name="ciCompany"
+                value=model.record.ciCompany
+                class="form-control"
+              }}
             </div>
             <div class="form-group">
-              <label>{{t 'form-hotel-card-ciOcupation'}}:</label>
-              {{input name="ciOcupation" value=model.record.ciOcupation class="form-control"}}
+              <label>{{t "form-hotel-card-ciOcupation"}}:</label>
+              {{input
+                name="ciOcupation"
+                value=model.record.ciOcupation
+                class="form-control"
+              }}
             </div>
             <div class="form-group">
-              <label>{{t 'form-hotel-card-ciAddress'}}:</label>
-              {{input name="ciAddress" value=model.record.ciAddress class="form-control"}}
+              <label>{{t "form-hotel-card-ciAddress"}}:</label>
+              {{input
+                name="ciAddress"
+                value=model.record.ciAddress
+                class="form-control"
+              }}
             </div>
             <div class="form-group">
-              <label>{{t 'form-hotel-card-ciZipCode'}}:</label>
-              {{input name="ciZipCode" value=model.record.ciZipCode class="form-control"}}
+              <label>{{t "form-hotel-card-ciZipCode"}}:</label>
+              {{input
+                name="ciZipCode"
+                value=model.record.ciZipCode
+                class="form-control"
+              }}
             </div>
             <div class="form-group">
-              <label>{{t 'form-hotel-card-ciCity'}}:</label>
-              {{input name="ciCity" value=model.record.ciCity class="form-control"}}
+              <label>{{t "form-hotel-card-ciCity"}}:</label>
+              {{input
+                name="ciCity"
+                value=model.record.ciCity
+                class="form-control"
+              }}
             </div>
             <div class="form-group">
-              <label>{{t 'form-hotel-card-ciState'}}:</label>
-              {{input name="ciState" value=model.record.ciState class="form-control"}}
+              <label>{{t "form-hotel-card-ciState"}}:</label>
+              {{input
+                name="ciState"
+                value=model.record.ciState
+                class="form-control"
+              }}
             </div>
             <div class="form-group">
-              <label>{{t 'form-hotel-card-ciCountry'}}:</label>
-              {{input name="ciCountry" value=model.record.ciCountry class="form-control"}}
+              <label>{{t "form-hotel-card-ciCountry"}}:</label>
+              {{input
+                name="ciCountry"
+                value=model.record.ciCountry
+                class="form-control"
+              }}
             </div>
             <div class="form-group">
-              <label>{{t 'form-hotel-card-ciPhoneNumber'}}*:</label>
-              {{input name="ciPhoneNumber" value=model.record.ciPhoneNumber class="form-control"}}
+              <label>{{t "form-hotel-card-ciPhoneNumber"}}*:</label>
+              {{input
+                name="ciPhoneNumber"
+                value=model.record.ciPhoneNumber
+                class="form-control"
+              }}
             </div>
           </fieldset>
         </div>
@@ -135,14 +216,18 @@
                 options=model.genderOptions
                 selected=model.record.gender
                 onchange=(action (mut model.record.gender))
-                as |term|
+              as |term|
               }}
                 {{term}}
               {{/power-select}}
             </div>
             <div class="form-group">
               <label>
-                {{input name="ciSmoke" type="checkbox" checked=model.record.ciSmoke}} {{t 'form-hotel-card-ciSmoke'}}
+                {{input
+                  name="ciSmoke"
+                  type="checkbox"
+                  checked=model.record.ciSmoke
+                }} {{t "form-hotel-card-ciSmoke"}}
               </label>
             </div>
           </fieldset>
@@ -155,15 +240,24 @@
       <div class="footer-actions">
         <button class="btn btn-primary">
           <i class="fa fa-save"></i>
-          {{t 'content.Save'}}
+          {{t "content.Save"}}
         </button>
-        <button {{action 'goTo' 'hotel-cards.index'}} type="button" class="btn btn-default">
+        <button
+          type="button"
+          class="btn btn-default"
+          {{action "goTo" "hotel-cards.index"}}
+        >
           <i class="fa fa-step-backward"></i>
           Fichas
         </button>
 
         {{#if model.record.id}}
-          <a href="/hotel-card/{{model.record.id}}/print" class="btn btn-default" target="_blank">
+          <a
+            href="/hotel-card/{{model.record.id}}/print"
+            class="btn btn-default"
+            target="_blank"
+            rel="noopener"
+          >
             <i class="glyphicon glyphicon-print text-success"></i>
           </a>
         {{/if}}
