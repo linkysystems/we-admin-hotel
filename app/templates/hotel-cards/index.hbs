@@ -1,8 +1,8 @@
 <h1 class="page-header">Fichas de registro</h1>
 <div class="actions">
-  {{#acl-btn-create model='hotel-card' url="/hotel-cards/create"}}Preencher ficha{{/acl-btn-create}}
+  {{#acl-btn-create model="hotel-card" url="/hotel-cards/create"}}Preencher ficha{{/acl-btn-create}}
 
-  {{#link-to 'hotel-cards.conditions' class="btn btn-default"}}
+  {{#link-to "hotel-cards.conditions" class="btn btn-default"}}
     Editar condições
   {{/link-to}}
 </div>
@@ -11,6 +11,6 @@
   data=model.records
   columns=model.columns
   pageSize=25
-  deleteRecord='deleteRecord'
-  print='print'
+  deleteRecord="deleteRecord"
+  print="print"
 }}

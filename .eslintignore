@@ -5,6 +5,7 @@
 # compiled output
 /dist/
 /tmp/
+/prod/
 
 # dependencies
 /bower_components/
@@ -18,3 +19,6 @@
 /package.json.ember-try
 
 /public/tiny-mce-languages
+
+/tests/
+/plugin.js

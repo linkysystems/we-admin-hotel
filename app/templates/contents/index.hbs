@@ -1,6 +1,6 @@
-<h1 class="page-header">{{t 'content.find'}}</h1>
+<h1 class="page-header">{{t "content.find"}}</h1>
 <div class="actions">
-  {{#acl-btn-create model="content" url="/contents/create"}}{{t 'content.create'}}{{/acl-btn-create}}
+  {{#acl-btn-create model="content" url="/contents/create"}}{{t "content.create"}}{{/acl-btn-create}}
 </div>
 <br>
 {{conteudos-table
@@ -8,6 +8,6 @@
   columns=model.columns
   pageSize=25
   useFilteringByColumns=false
-  deleteRecord='deleteRecord'
-  changePublishedStatus='changePublishedStatus'
+  deleteRecord="deleteRecord"
+  changePublishedStatus="changePublishedStatus"
 }}

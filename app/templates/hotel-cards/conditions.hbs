@@ -1,6 +1,8 @@
 <h1 class="page-header">Editar condições</h1>
 
-<form {{action "saveConditions" model.systemSettings.hotelCardConditions on="submit"}}>
+<form
+  {{action "saveConditions" model.systemSettings.hotelCardConditions on="submit" }}
+>
   <div class="form-group">
     <label>Condições de hospedagem*:</label>
     <p class="help-block">Condições que são exibidas no formulário de Web Check-in</p>
@@ -12,7 +14,11 @@
       <i class="fa fa-save"></i>
       Salvar
     </button>
-    <button {{action 'goTo' 'hotel-cards.index'}} type="button" class="btn btn-default">
+    <button
+      type="button"
+      class="btn btn-default"
+      {{action "goTo" "hotel-cards.index"}}
+    >
       <i class="fa fa-step-backward"></i>
       Fichas
     </button>

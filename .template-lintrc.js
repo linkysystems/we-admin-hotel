@@ -1,5 +1,9 @@
 'use strict';
 
 module.exports = {
-  extends: 'recommended'
+  extends: 'recommended',
+  rules: {
+    'no-partial': false,
+    'no-bare-strings': true
+  }
 };
