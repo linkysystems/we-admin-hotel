@@ -6,6 +6,9 @@ module.exports = function(environment) {
     environment,
     rootURL: '/admin/',
     locationType: 'hash',
+    API_HOST: '',
+    imageHost: '',
+    GLOBAL_HOST: 'https://shop.linkysystems.com',
     i18n: {
       defaultLocale: 'pt-br'
     },
@@ -198,6 +201,12 @@ module.exports = function(environment) {
         text: 'Configurações',
         linkTo: 'settings.index',
         permission: 'system_settings_update'
+      },
+      {
+        icon: '<i class="fa fa-globe" aria-hidden="true"></i>',
+        text: 'Tradução',
+        linkTo: 't.index',
+        permission: 'create_t'
       }
     ],
 
@@ -253,7 +262,8 @@ module.exports = function(environment) {
     },
 
     tinyMCE:{
-      version: 4
+      version: 4,
+      // load: false
     }
   };
 
@@ -265,17 +275,16 @@ module.exports = function(environment) {
     routeIfAlreadyAuthenticated: 'index',
     serverTokenEndpoint: '/auth/grant-password/authenticate',
 
-
     authorizer: 'authorizer:custom',
     store: 'simple-auth-session-store:cookie', // optional
-    crossOriginWhitelist: ['http://localhost:5100']
+    crossOriginWhitelist: [( process.env.API_HOST || 'http://localhost:5100' )]
   };
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
-    // ENV.APP.LOG_TRANSITIONS = true;
-    // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
+    ENV.APP.LOG_TRANSITIONS = true;
+    ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
     if (!ENV.APP) {
       ENV.APP = {};

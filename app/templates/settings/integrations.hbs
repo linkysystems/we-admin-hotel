@@ -196,6 +196,20 @@
         </div>
       </div>
 
+      {{#if model.haveFBPixelPlugin}}
+        <div class="panel panel-default">
+          <div class="panel-heading"><i class="fa fa-facebook" aria-hidden="true"></i> Facebook pixel:</div>
+          <div class="panel-body">
+            <fieldset>
+              <div class="form-group">
+                <label>Facebook pixel ID:</label>
+                {{input value=model.settings.fbPixelID name="fbPixelID" class="form-control"}}
+                <p class="help-block">Para mais informações acesse: <a href="https://developers.facebook.com/docs/facebook-pixel/implementation" target="_blank">https://developers.facebook.com/docs/facebook-pixel/implementation.</a></p>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+      {{/if}}
     </div>
 
     <div class="col-md-12">

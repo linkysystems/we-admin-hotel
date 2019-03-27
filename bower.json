@@ -1,7 +1,9 @@
 {
-  "name": "we-admin-hotel",
+  "name": "republica_org-admin",
+  "private": true,
   "dependencies": {
     "pace": "^1.0.2",
+    "font-awesome": "~4.5.0",
     "metisMenu": "^2.5.2"
   }
 }

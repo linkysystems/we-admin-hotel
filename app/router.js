@@ -136,6 +136,11 @@ Router.map(function() {
     this.route('item', { path: ':id' }, function(){});
   });
 
+  this.route('t', function() {
+    this.route('create');
+    this.route('item', { path: ':id' }, function(){});
+  });
+
   this.route('widgets');
 
   this.route('d-forms', function() {
