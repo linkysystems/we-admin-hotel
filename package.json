@@ -70,7 +70,7 @@
     "loader.js": "^4.7.0",
     "qunit-dom": "^0.7.1",
     "we-admin": "wejs/we-admin#v1.0.29",
-    "we-admin-d-form": "linkysystems/we-admin-d-form",
+    "we-admin-d-form": "linkysystems/we-admin-d-form#v1.1.0",
     "we-admin-news": "linkysystems/we-admin-news#v1.0.1",
     "we-admin-simple-event": "linkysystems/we-admin-simple-event#v0.0.1"
   },
