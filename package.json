@@ -1,8 +1,8 @@
 {
-  "name": "we-admin-hotel",
+  "name": "@we.js/we-admin-hotel",
   "version": "1.0.19",
-  "private": true,
-  "description": "Small description for we-admin-hotel goes here",
+  "description": "We.js administrative interface for We.js hotel sites",
+  "private": false,
   "repository": "linkysystems/we-admin-hotel",
   "license": "MIT",
   "author": "Alberto Souza <contato@albertosouza.net>",
@@ -69,7 +69,7 @@
     "eslint-plugin-ember": "^5.2.0",
     "loader.js": "^4.7.0",
     "qunit-dom": "^0.7.1",
-    "we-admin": "wejs/we-admin#v1.0.29",
+    "@we.js/we-admin": "^1.0.36",
     "we-admin-d-form": "linkysystems/we-admin-d-form#v1.1.2",
     "we-admin-news": "linkysystems/we-admin-news#v1.0.1",
     "we-admin-simple-event": "linkysystems/we-admin-simple-event#v0.0.1"
@@ -78,7 +78,8 @@
     "node": "6.* || 8.* || >= 10.*"
   },
   "keywords": [
-    "wejs-plugin"
+    "wejs-plugin",
+    "wejs-admin-ui"
   ],
   "wejs": {
     "dependencies": {
