@@ -1,6 +1,6 @@
 {
   "name": "we-admin-hotel",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "description": "We.js administrative interface for We.js hotel sites",
   "private": false,
   "repository": "linkysystems/we-admin-hotel",
