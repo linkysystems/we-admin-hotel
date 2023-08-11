@@ -260,10 +260,10 @@ module.exports = function(environment) {
         // ignoreURLs: []
       }
     },
-
     tinyMCE:{
       version: 4,
-      // load: false
+      scriptSrc: 'https://cdnjs.cloudflare.com/ajax/libs/tinymce/4.7.13/tinymce.min.js?_=1691716648943',
+      load: false
     }
   };
 
@@ -293,9 +293,9 @@ module.exports = function(environment) {
     ENV.APP.corsWithCreds = false;
     ENV.APP.apiURL = null;
 
-    ENV.API_HOST = 'http://localhost:5100';
-    ENV.GLOBAL_HOST = 'http://localhost:5102';
-    ENV.imageHost = 'http://localhost:5100';
+    ENV.API_HOST = 'http://localhost:6500';
+    ENV.GLOBAL_HOST = 'http://localhost:6500';
+    ENV.imageHost = 'http://localhost:6500';
 
     ENV['ember-simple-auth'].serverTokenEndpoint = ENV['API_HOST'] + ENV['ember-simple-auth'].serverTokenEndpoint;
   }
